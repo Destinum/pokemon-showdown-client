@@ -32468,3 +32468,5 @@ BattleMoveAnims['eeriespell'] = {anim: BattleMoveAnims['psyshock'].anim};
 //start of fakemon moves
 
 BattleMoveAnims['aridgale'] = {anim: BattleMoveAnims['hurricane'].anim};
+BattleMoveAnims['frigidgale'] = {anim: BattleMoveAnims['hurricane'].anim};
+BattleMoveAnims['icebreaker'] = {anim: BattleMoveAnims['gigaimpact'].anim};
