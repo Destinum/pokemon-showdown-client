@@ -182,7 +182,7 @@ const Dex = new class implements ModdedDex {
 	resourcePrefix = (() => {
 		let prefix = '';
 		if (window.document?.location?.protocol !== 'http:') prefix = 'https:';
-		return `${prefix}//${window.Config ? Config.routes.client : 'play.pokemonshowdown.com'}/`;
+		return `${prefix}//${window.Config ? Config.routes.client : 'play.pokemonshowdown.com'}/`;					//Might need to edit this
 	})();
 
 	fxPrefix = (() => {
@@ -635,6 +635,18 @@ const Dex = new class implements ModdedDex {
 			// Handle these in case-by-case basis; either using BW sprites or matching the played gen.
 			dir = (baseDir || 'gen5') + dir;
 
+			//spriteData.url = './sprites/gen5-back/emperoc.png';
+			//return spriteData;
+			
+			
+			//let id = toID(name);
+			//if (id === '4201') {	
+			if (name === 'emperoc') {			//Custom added for Fakemon
+				spriteData.url = './sprites/FakemonSprites/' + name + '.png';
+				//spriteData.url = './sprites/' + dir + '/' + name + '.png';
+				return spriteData;
+			}
+			
 			// Gender differences don't exist prior to Gen 4,
 			// so there are no sprites for it
 			if (spriteData.gen >= 4 && miscData['frontf'] && options.gender === 'F') {
