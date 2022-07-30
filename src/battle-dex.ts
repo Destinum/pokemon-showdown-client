@@ -635,13 +635,7 @@ const Dex = new class implements ModdedDex {
 			// Handle these in case-by-case basis; either using BW sprites or matching the played gen.
 			dir = (baseDir || 'gen5') + dir;
 
-			//spriteData.url = './sprites/gen5-back/emperoc.png';
-			//return spriteData;
-			
-			
-			//let id = toID(name);
-			//if (id === '4201') {	
-			if (name === 'emperoc') {			//Custom added for Fakemon
+			if (species.num > 4200) {			//Custom added for Fakemon	
 				spriteData.url = './sprites/FakemonSprites/' + name + '.png';
 				//spriteData.url = './sprites/' + dir + '/' + name + '.png';
 				return spriteData;
