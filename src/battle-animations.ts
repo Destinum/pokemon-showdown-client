@@ -1829,6 +1829,7 @@ export class PokemonSprite extends Sprite {
 		infestation: ['Infestation', 'bad'],
 		magmastorm: ['Magma Storm', 'bad'],
 		sandtomb: ['Sand Tomb', 'bad'],
+    blackhole: ['Black Hole', 'bad'],
 		snaptrap: ['Snap Trap', 'bad'],
 		thundercage: ['Thunder Cage', 'bad'],
 		whirlpool: ['Whirlpool', 'bad'],

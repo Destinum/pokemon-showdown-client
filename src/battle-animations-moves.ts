@@ -32476,3 +32476,4 @@ BattleMoveAnims['magicacid'] = {anim: BattleMoveAnims['sludge'].anim};
 BattleMoveAnims['unstableconcoction'] = {anim: BattleMoveAnims['iceball'].anim};
 BattleMoveAnims['lastbreath'] = {anim: BattleMoveAnims['aeroblast'].anim};
 BattleMoveAnims['battlecry'] = {anim: BattleMoveAnims['hypervoice'].anim};
+BattleMoveAnims['blackhole'] = {anim: BattleMoveAnims['darkvoid'].anim};
