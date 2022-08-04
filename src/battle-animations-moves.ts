@@ -32465,7 +32465,7 @@ BattleMoveAnims['shellsidearmspecial'] = {anim: BattleMoveAnims['sludgebomb'].an
 BattleMoveAnims['surgingstrikes'] = {anim: BattleMoveAnims['aquajet'].anim};
 BattleMoveAnims['eeriespell'] = {anim: BattleMoveAnims['psyshock'].anim};
 
-//start of fakemon moves
+//start of my Fakemon Moves
 
 BattleMoveAnims['aridgale'] = {anim: BattleMoveAnims['hurricane'].anim};
 BattleMoveAnims['frigidgale'] = {anim: BattleMoveAnims['hurricane'].anim};
@@ -32481,3 +32481,7 @@ BattleMoveAnims['thunderhammer'] = {anim: BattleMoveAnims['plasmafists'].anim};
 BattleMoveAnims['subzerojolt'] = {anim: BattleMoveAnims['wildcharge'].anim};
 BattleMoveAnims['burrow'] = {anim: BattleMoveAnims['dig'].anim};
 BattleMoveAnims['tillage'] = {anim: BattleMoveAnims['steamroller'].anim};
+
+//Start of other people's Fakemon Moves
+
+BattleMoveAnims['gun'] = {anim: BattleMoveAnims['vacuumwave'].anim};
