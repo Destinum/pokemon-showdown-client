@@ -32477,3 +32477,7 @@ BattleMoveAnims['unstableconcoction'] = {anim: BattleMoveAnims['iceball'].anim};
 BattleMoveAnims['lastbreath'] = {anim: BattleMoveAnims['aeroblast'].anim};
 BattleMoveAnims['battlecry'] = {anim: BattleMoveAnims['hypervoice'].anim};
 BattleMoveAnims['blackhole'] = {anim: BattleMoveAnims['darkvoid'].anim};
+BattleMoveAnims['thunderhammer'] = {anim: BattleMoveAnims['plasmafists'].anim};
+BattleMoveAnims['subzerojolt'] = {anim: BattleMoveAnims['wildcharge'].anim};
+BattleMoveAnims['burrow'] = {anim: BattleMoveAnims['dig'].anim};
+BattleMoveAnims['tillage'] = {anim: BattleMoveAnims['steamroller'].anim};
