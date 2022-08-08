@@ -32116,6 +32116,19 @@ export const BattleMoveAnims: AnimTable = {
 			}, 'swing');
 		},
 	},
+	burrow: {			//Added for Fakemon
+		anim(scene, [attacker, defender]) {
+			attacker.anim({
+				opacity: 0.2,
+				y: attacker.y - 80,
+				time: 300,
+			}, 'linear');
+			attacker.anim({
+				opacity: 1.0,
+				time: 300,
+			}, 'linear');
+		},
+	},
 };
 
 // placeholder animations
@@ -32479,7 +32492,7 @@ BattleMoveAnims['battlecry'] = {anim: BattleMoveAnims['hypervoice'].anim};
 BattleMoveAnims['blackhole'] = {anim: BattleMoveAnims['darkvoid'].anim};
 BattleMoveAnims['thunderhammer'] = {anim: BattleMoveAnims['plasmafists'].anim};
 BattleMoveAnims['subzerojolt'] = {anim: BattleMoveAnims['wildcharge'].anim};
-BattleMoveAnims['burrow'] = {anim: BattleMoveAnims['dig'].anim};
+//BattleMoveAnims['burrow'] = {anim: BattleMoveAnims['dig'].anim};
 BattleMoveAnims['tillage'] = {anim: BattleMoveAnims['steamroller'].anim};
 
 //Start of other people's Fakemon Moves
