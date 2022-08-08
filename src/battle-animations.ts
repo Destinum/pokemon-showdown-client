@@ -1753,6 +1753,7 @@ export class PokemonSprite extends Sprite {
 		healblock: ['Heal Block', 'bad'],
 		yawn: ['Drowsy', 'bad'],
 		flashfire: ['Flash Fire', 'good'],
+    volcanicfire: ['Volcanic Fire', 'good'],      //Added for Fakemon
 		imprison: ['Imprisoning foe', 'good'],
 		autotomize: ['Lightened', 'neutral'],
 		miracleeye: ['Miracle Eye', 'bad'],

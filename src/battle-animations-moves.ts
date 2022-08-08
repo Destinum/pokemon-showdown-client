@@ -32498,3 +32498,5 @@ BattleMoveAnims['tillage'] = {anim: BattleMoveAnims['steamroller'].anim};
 //Start of other people's Fakemon Moves
 
 BattleMoveAnims['gunshot'] = {anim: BattleMoveAnims['vacuumwave'].anim};
+BattleMoveAnims['magmaburst'] = {anim: BattleMoveAnims['overheat'].anim};
+BattleMoveAnims['stormbreaker'] = {anim: BattleMoveAnims['skyattack'].anim};
