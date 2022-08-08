@@ -1769,6 +1769,7 @@ export class PokemonSprite extends Sprite {
 		embargo: ['Embargo', 'bad'],
 		ingrain: ['Ingrain', 'good'],
 		aquaring: ['Aqua Ring', 'good'],
+    burrow: ['Burrow', 'good'],      //Added for Fakemon
 		stockpile1: ['Stockpile', 'good'],
 		stockpile2: ['Stockpile&times;2', 'good'],
 		stockpile3: ['Stockpile&times;3', 'good'],
@@ -1829,7 +1830,7 @@ export class PokemonSprite extends Sprite {
 		infestation: ['Infestation', 'bad'],
 		magmastorm: ['Magma Storm', 'bad'],
 		sandtomb: ['Sand Tomb', 'bad'],
-    blackhole: ['Black Hole', 'bad'],
+    blackhole: ['Black Hole', 'bad'],   //Added for Fakemon
 		snaptrap: ['Snap Trap', 'bad'],
 		thundercage: ['Thunder Cage', 'bad'],
 		whirlpool: ['Whirlpool', 'bad'],
