@@ -32500,3 +32500,4 @@ BattleMoveAnims['tillage'] = {anim: BattleMoveAnims['steamroller'].anim};
 BattleMoveAnims['gunshot'] = {anim: BattleMoveAnims['vacuumwave'].anim};
 BattleMoveAnims['magmaburst'] = {anim: BattleMoveAnims['overheat'].anim};
 BattleMoveAnims['stormbreaker'] = {anim: BattleMoveAnims['skyattack'].anim};
+BattleMoveAnims['aquafang'] = {anim: BattleMoveAnims['bite'].anim};
