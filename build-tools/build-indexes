@@ -327,6 +327,7 @@ process.stdout.write("Building `data/teambuilder-tables.js`... ");
 	for (const genIdent of [...GENS, ...DOUBLES, ...VGC, ...NFE, ...STADIUM, ...OTHER]) {
 		const isLetsGo = (genIdent === 7.1);
 		const isBDSP = (genIdent === 8.6 || genIdent === -8.6);
+		const isRebalanced = (genIdent === 8.42 || genIdent === -8.42);			//Added for custom and/or fakemon
 		const isMetBattle = (genIdent === 8.2);
 		const isNFE = ('' + genIdent).endsWith('.3');
 		const isDLC1 = (genIdent === 8.4 || genIdent === -8.4);
@@ -340,6 +341,7 @@ process.stdout.write("Building `data/teambuilder-tables.js`... ");
 			if (isDLC1) genStr += 'dlc1';
 			if (isLetsGo) genStr += 'letsgo';
 			if (isBDSP) genStr += 'bdsp';
+			if (isRebalanced) genStr += 'rebalanced';			//Added for custom and/or fakemon
 			if (isStadium) genStr += 'stadium' + (genNum > 1 ? genNum : '');
 			return genStr;
 		})();
@@ -518,6 +520,10 @@ process.stdout.write("Building `data/teambuilder-tables.js`... ");
 			BattleTeambuilderTable['gen8bdsp'].overrideTier = overrideTier;
 			BattleTeambuilderTable['gen8bdsp'].monotypeBans = monotypeBans;
 			BattleTeambuilderTable['gen8bdsp'].formatSlices = formatSlices;
+		} else if (isRebalanced) {																	//Added for custom and/or fakemon
+			BattleTeambuilderTable['gen8rebalanced'] = {};
+			BattleTeambuilderTable['gen8rebalanced'].learnsets = {};
+			BattleTeambuilderTable['gen8rebalanced'].formatSlices = formatSlices;
 		} else if (isVGC) {
 			BattleTeambuilderTable[gen + 'vgc'] = {};
 			BattleTeambuilderTable[gen + 'vgc'].tiers = tiers;
@@ -900,6 +906,16 @@ process.stdout.write("Building `data/teambuilder-tables.js`... ");
 			BattleTeambuilderTable['gen8bdsp'].learnsets[id][moveid] = '8g';
 		}
 	}
+	const RebalancedLearnsets = Dex.mod('gen8rebalanced').data.Learnsets;						//Added for custom and/or fakemon
+	for (const id in RebalancedLearnsets) {													//Added for custom and/or fakemon
+		const species = Dex.mod('gen8rebalanced').species.get(id);
+		if (species.isNonstandard && !['Unobtainable', 'CAP'].includes(species.isNonstandard)) continue;
+		const learnset = RebalancedLearnsets[id].learnset;
+		BattleTeambuilderTable['gen8rebalanced'].learnsets[id] = {};
+		for (const moveid in learnset) {
+			BattleTeambuilderTable['gen8rebalanced'].learnsets[id][moveid] = '8g';
+		}
+	}
 	const DLC1Learnsets = Dex.mod('gen8dlc1').data.Learnsets;
 	for (const id in DLC1Learnsets) {
 		const learnset = DLC1Learnsets[id].learnset;
@@ -1030,7 +1046,7 @@ process.stdout.write("Building `data/teambuilder-tables.js`... ");
 	// Mods
 	//
 
-	for (const mod of ['gen7letsgo', 'gen8bdsp']) {
+	for (const mod of ['gen7letsgo', 'gen8bdsp', 'gen8rebalanced']) {			//Added 'gen8rebalanced' for custom and/or fakemon
 		const modDex = Dex.mod(mod);
 		const modData = modDex.data;
 		const parentDex = Dex.forGen(modDex.gen);
