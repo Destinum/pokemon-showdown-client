@@ -523,6 +523,7 @@ process.stdout.write("Building `data/teambuilder-tables.js`... ");
 		} else if (isRebalanced) {																	//Added for custom and/or fakemon
 			BattleTeambuilderTable['gen8rebalanced'] = {};
 			BattleTeambuilderTable['gen8rebalanced'].learnsets = {};
+			//BattleTeambuilderTable['gen8rebalanced'].moves = {};
 			BattleTeambuilderTable['gen8rebalanced'].formatSlices = formatSlices;
 		} else if (isVGC) {
 			BattleTeambuilderTable[gen + 'vgc'] = {};
