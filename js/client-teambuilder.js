@@ -27,9 +27,9 @@
 				if (this.curTeam.format.includes('bdsp')) {
 					this.curTeam.dex = Dex.mod('gen8bdsp');
 				}
-				if (this.curTeam.format.includes('rebalanced')) {			//Added for custom and/or fakemon
+				/*if (this.curTeam.format.includes('rebalanced')) {			//Added for custom and/or fakemon
 					this.curTeam.dex = Dex.mod('gen8rebalanced');
-				}
+				}*/
 				Storage.activeSetList = this.curSetList;
 			}
 		},
@@ -697,9 +697,9 @@
 			if (this.curTeam.format.includes('bdsp')) {
 				this.curTeam.dex = Dex.mod('gen8bdsp');
 			}
-			if (this.curTeam.format.includes('rebalanced')) {			//Added for custom and/or fakemon
+			/*if (this.curTeam.format.includes('rebalanced')) {			//Added for custom and/or fakemon
 				this.curTeam.dex = Dex.mod('gen8rebalanced');
-			}
+			}*/
 			Storage.activeSetList = this.curSetList = Storage.unpackTeam(this.curTeam.team);
 			this.curTeamIndex = i;
 			this.update();
@@ -1486,9 +1486,9 @@
 			if (this.curTeam.format.includes('bdsp')) {
 				this.curTeam.dex = Dex.mod('gen8bdsp');
 			}
-			if (this.curTeam.format.includes('rebalanced')) {			//Added for custom and/or fakemon
+			/*if (this.curTeam.format.includes('rebalanced')) {			//Added for custom and/or fakemon
 				this.curTeam.dex = Dex.mod('gen8rebalanced');
-			}
+			}*/
 			this.save();
 			if (this.curTeam.gen === 5 && !Dex.loadedSpriteData['bw']) Dex.loadSpriteData('bw');
 			this.update();
@@ -2604,7 +2604,7 @@
 			var set = this.curSet;
 			var isLetsGo = this.curTeam.format.includes('letsgo');
 			var isBDSP = this.curTeam.format.includes('bdsp');
-			var isRebalanced = this.curTeam.format.includes('rebalanced');			//Added for custom and/or fakemon
+			//var isRebalanced = this.curTeam.format.includes('rebalanced');			//Added for custom and/or fakemon
 			var isNatDex = this.curTeam.gen === 8 && this.curTeam.format.includes('nationaldex');
 			var species = this.curTeam.dex.species.get(set.species);
 			if (!set) return;
@@ -2694,7 +2694,7 @@
 			var species = this.curTeam.dex.species.get(set.species);
 			var isLetsGo = this.curTeam.format.includes('letsgo');
 			var isBDSP = this.curTeam.format.includes('bdsp');
-			var isRebalanced = this.curTeam.format.includes('rebalanced');			//Added for custom and/or fakemon
+			//var isRebalanced = this.curTeam.format.includes('rebalanced');			//Added for custom and/or fakemon
 			var isNatDex = this.curTeam.format.includes('nationaldex');
 
 			// level
